@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Poppins", Arial, "Times New Roman", serif, sans-serif;
+    -webkit-text-size-adjust: 100%; /* Safari, old iOS */
+    text-size-adjust: 100%; /* Modern browsers */
+  }
+  body {
+    background-color: #fdfeff;
+    overflow-x: hidden;
+  }
+
+  /* Quill font size overrides for consistent rendering */
+  .ql-size-small {
+    font-size: 0.8rem;
+  }
+  .ql-size-large {
+    font-size: 1.5rem;
+  }
+  .ql-size-huge {
+    font-size: 2rem;
+  }
+}
+
+@layer components {
+  .input-box {
+    @apply w-full text-sm bg-transparent border-[1.5px] px-5 py-3 rounded mb-4 outline-none;
+  }
+
+  .btn-primary {
+    @apply w-full text-sm bg-primary text-white p-2 rounded my-1 hover:bg-blue-600;
+  }
+
+  .icon-btn {
+    @apply text-xl text-slate-300 cursor-pointer hover:text-primary;
+  }
+
+  .input-label {
+    @apply text-xs text-slate-400;
+  }
+}
+
+/* Quill custom fonts */
+.ql-font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+.ql-font-arial {
+  font-family: Arial, sans-serif;
+}
+.ql-font-roman {
+  font-family: "Times New Roman", serif;
+}
+.ql-font-sansserif {
+  font-family: sans-serif;
+}
+.ql-font-serif {
+  font-family: serif;
+}
+
+/* Quill font picker labels */
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="poppins"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="poppins"]::before {
+  content: "Poppins";
+  font-family: "Poppins", sans-serif;
+}
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="arial"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="arial"]::before {
+  content: "Arial";
+  font-family: Arial, sans-serif;
+}
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="roman"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="roman"]::before {
+  content: "Roman";
+  font-family: "Times New Roman", serif;
+}
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="sansserif"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="sansserif"]::before {
+  content: "Sans Serif";
+  font-family: sans-serif;
+}
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="serif"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="serif"]::before {
+  content: "Serif";
+  font-family: serif;
+}
